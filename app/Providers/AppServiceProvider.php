@@ -13,7 +13,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        //注册账户添加邮箱验证token
+        \App\Models\User::observe(\App\Observers\UserObserver::class);
     }
 
     /**
